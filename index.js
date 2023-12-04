@@ -24,6 +24,9 @@ dbConnection();
 
 // Rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/citas', require('./routes/citas'));
+app.use('/api/todo', require('./routes/busquedas'));
+app.use('/api/upload', require('./routes/uploads'));
 app.use('/api/login', require('./routes/auth'));
 
 
