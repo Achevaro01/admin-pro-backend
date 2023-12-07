@@ -139,11 +139,6 @@ const borrarCita = async ( req, res =  response ) => {
         
     }
 
-    res.json({
-        ok: true,
-        msg: 'borrarCita'
-    });
-
 }
 
 module.exports = {
