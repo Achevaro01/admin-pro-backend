@@ -36,11 +36,18 @@ router.post('/',
 );
 
 router.put('/:id', 
-    [], 
+    [
+        validarJWT,
+        check('fecha', 'La fecha es necesaria').not().isEmpty(),
+        check('hora', 'La hora es necesaria').not().isEmpty(),
+        validarCampos,
+    ], 
     actualizarCita 
 );
 
 router.delete('/:id', 
+
+    validarJWT,
     borrarCita
 );
 
