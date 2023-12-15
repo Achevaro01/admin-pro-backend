@@ -27,7 +27,7 @@ const CitaSchema = Schema({
 CitaSchema.method('toJSON', function() {
     const {__v, ...Object} = this.toObject();
  
-     Object.uid = this._id;
+    // Object.uid = this._id;
     return Object;
  })
  

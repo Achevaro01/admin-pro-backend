@@ -2,14 +2,15 @@ const { response } = require('express');
 
 const Cita = require('../models/cita');
 
+
 const getCitas = async( req, res =  response ) => {
 
-    const citas = await Cita.find()
-                            .populate('usuario', 'nombre');
-
+    const citas = await Cita.find().populate('usuario', 'nombre email');
+   
+                            
     res.json({
         ok: true,
-        citas
+        citas,
     });
 
 }
@@ -17,8 +18,9 @@ const getCitas = async( req, res =  response ) => {
 const crearCita = async ( req, res =  response ) => {
 
 
-    const uid = req.uid;
+    
     const { fecha, hora } = req.body;
+    const uid = req.uid;
     
     // Verificar si hay citas existentes con la misma fecha y hora
     const citaExistente = await Cita.findOne({ fecha, hora });
@@ -52,7 +54,6 @@ const crearCita = async ( req, res =  response ) => {
             msg: 'Hable con el administrador'
         });
     }
-
 
 
 }
