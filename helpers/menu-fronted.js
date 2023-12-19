@@ -11,8 +11,8 @@ const getMenuFrontEnd = (role = 'USER_ROLE') => {
           submenu: [
             { titulo: 'Sobre nosotros', url: '/' },
             { titulo: 'Redes Sociales', url: 'redes-sociales' },
-            { titulo: 'rxjs', url: 'rxjs' },
-            { titulo: 'Promesas', url: 'promesas' },
+            { titulo: 'Cita', url: 'cita' },
+            { titulo: 'Grafica', url: 'grafica' },
             { titulo: 'ProgressBar', url: 'progress' },
           ]
         },
@@ -34,6 +34,7 @@ const getMenuFrontEnd = (role = 'USER_ROLE') => {
             { titulo: 'Sobre nosotros', url: '/' },
             { titulo: 'Redes Sociales', url: 'redes-sociales' },
             { titulo: 'Cita', url: 'cita' },
+            { titulo: 'Grafica', url: 'grafica' },
             { titulo: 'ProgressBar', url: 'progress' },
           ]
         },
